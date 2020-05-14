@@ -1,0 +1,576 @@
+/******************************
+	[ TABLE OF Contents ]
+		1- General styles
+		2- My framework (special classes created by me)
+		3- Preloader
+		4- Header
+		5- Home
+		6- About-us
+		7- Portfolio
+		8- Testimonials
+		9- Contact Us
+	   10- Footer
+	   11- Shared styles
+******************************/
+
+
+/*** 1- Start general styles ***/
+* {box-sizing: border-box;}
+body {font-family: 'futura_ltbook', sans-serif;}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'futura_ltbold', sans-serif;
+    color:  #484848;
+}
+a,button{outline: none !important;}
+a:hover,a:focus{text-decoration: none; outline: none;}
+/*** End general styles ***/
+
+
+/*** 2- Start my framework ***/
+.main-bg {background-color: #42b3e5;}
+.section-bg {background-color: #f2f7fa;}
+.main-color {color: #42b3e5 !important;}
+.y-100 {height: 100% !important;}
+@media (max-width: 768px) { .lead {font-size: 16px;} }
+.section-head {font-size: 30px;}
+.section-p {
+	font-size: 18px;
+	margin: 20px 15px 35px;
+}
+/* know button */
+.btn-know {
+	 width: 150px;
+	 height: 45px;
+	 border-radius: 15px;
+	 background-color: #42b3e5;
+	 line-height: 30px;
+	 font-size: 18px;
+	 cursor: pointer;
+	 border: 2px solid #42b3e5;
+}
+.btn-know a {color: #fff; font-weight: 600;}
+.btn-know:hover {background-color: transparent;}
+.btn-know:hover a {color: #42b3e5;}
+/* end know button */
+/*** End my framework ***/
+
+
+/*** 3- Start Preloader ***/
+#loading{
+    background-color: #42b3e5;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    margin-top: 0px;
+    top: 0px;
+    z-index: 90;
+}
+#loading-center{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#loading-center-absolute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 50px;
+    width: 150px;
+    margin-top: -25px;
+    margin-left: -75px;
+}
+.object{
+    width: 8px;
+    height: 50px;
+    margin-right:5px;
+    background-color: #FFF;
+    -webkit-animation: animate 1s infinite;
+    animation: animate 1s infinite;
+    float: left;
+}
+.object:last-child { margin-right: 0px;}
+.object:nth-child(10){
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;	
+}
+.object:nth-child(9){
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;	
+}	
+.object:nth-child(8){
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;	
+}
+.object:nth-child(7){
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;	
+}
+.object:nth-child(6){
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;	
+}
+.object:nth-child(5){
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+.object:nth-child(4){
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;		
+}
+.object:nth-child(3){
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;	
+}
+.object:nth-child(2){
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}						
+@-webkit-keyframes animate {
+    50% {
+        -ms-transform: translateX(-25px) scaleY(0.5); 
+        -webkit-transform: translateX(-25px) scaleY(0.5);
+        transform: translateX(-25px) scaleY(0.5);
+    }
+}
+@keyframes animate {
+    50% {
+        -ms-transform: translateX(-25px) scaleY(0.5); 
+        -webkit-transform: translateX(-25px) scaleY(0.5);
+        transform: translateX(-25px) scaleY(0.5);
+    }
+}
+/*** End Preloader ***/
+
+
+/*** 4- Start header ***/
+/* Top Navbar */
+header .top-nav a {color: #fff;}
+header .top-nav a:hover {color: #484848;} 
+header .top-nav .fa {font-size: 20px; margin: 12px 1px 3px;}
+@media (max-width: 991px) {
+header .top-nav .fa {margin-top: 1px;}
+header .top-nav .info-icons li:first-child {margin-top: 10px;}
+header .top-nav .social-icons .fa {margin-top: -1px;}
+}
+
+/* Main Navbar */
+.navbar {background-color: #e9f6fc;}
+.navbar .navbar-brand {
+	width: 200px;
+	height: 100px;
+	margin-top: -25px;
+}
+.navbar-nav .nav-link {
+	color: #242424 !important;
+	font-size: 18px;
+}
+.navbar-nav .active .nav-link,
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {color: #42b3e5 !important;}
+@media (min-width: 900px) {
+	.navbar-brand {margin-left: 10%;}
+	.navbar-collapse {margin-right: 10%;}
+	.navbar-nav .nav-link {font-size: 20px;}
+}
+/*** End header ***/
+
+
+/*** 5- Start Home ***/
+.home .carousel-item::before {
+	content:" ";
+	position: absolute;
+	height:100%;
+	width:100%;
+	background: rgba(0,0,0,0.7);
+	top:0;
+	left:0;
+}
+.carousel-caption {
+  positin: static !important;
+  right: 30px;
+  bottom: 6%;
+  left: 30px;
+  color: #eee;
+}
+.home .carousel-caption .heading {font-size: 60px; font-weight: bold;}
+.home .carousel-caption h1 {font-size: 70px; margin: -20px 0 15px;}
+.home .carousel-caption .h3 {color: #eee !important;}
+@media (max-width: 991px) {
+.carousel-item {height: 360px !important;}
+.carousel-caption {
+ positin: absolute !important;
+ top: 5%;
+}
+.home .carousel-caption .h3 {font-size: 18px; font-family: 'futura_ltbook', sans-serif;;} 
+.home .carousel-caption .heading {font-size: 25px;}
+.home .carousel-caption h1 {
+	font-size: 50px;
+	letter-spacing: 2px;
+	margin-bottom: 0px;
+}
+} 
+/*** End Home ***/
+
+
+/*** 6- Start about-us ***/
+.about-first .who-we h2 {font-size: 50px;}
+.about-first .who-we h3 {font-size: 35px; margin-bottom: 15px;}
+@media (max-width: 768px) {
+	.about-first .who-we h2 {font-size: 33px;}
+	.about-first .who-we h3 {font-size: 25px; margin-bottom: 15px;}
+}
+
+.about-second .why-item .fa {
+	 font-size: 40px;
+	 width: 100px;
+	 height: 100px;
+	 border-radius: 100%;
+	 border: 1px solid #42b3e5;
+	 line-height: 100px;
+	 margin-top: 50px;
+	 box-shadow: 0 0 0 10px #42b3e5, 0 0 0 20px #62c1ea, 0 0 2px 30px #8fd3f0;
+}
+.about-second .why-item h4 {font-size: 18px; margin: 55px 0 15px;}
+.about-second .why-item p {
+	font-size: 14px;
+	line-height: 1.2;
+	color: #606060;
+}
+/*** End about-us ***/
+
+
+/*** 7- Start portfolio  */
+.portfolio {background-color: #1c96ca;}
+.filters {margin: 52px 0 38px;}
+.filters > button {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 18px;
+    padding: 6px 17px 4px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 400;
+}
+.filters > button:hover, .filters > button.is-checked {
+    border: 1px solid #282828;
+    background: #282828;
+}
+.grid-item {
+	position: relative;
+	border-top: 15px solid transparent;
+	overflow:hidden;
+}
+.grid-item:hover img {transform: scale(1.1);} 
+.grid-item-layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.6);
+	opacity: 0;
+}
+.grid-item-layer:hover {opacity: 1;}
+.grid-item-layer > a:first-child{  margin-right: 10px;}
+.grid-item-layer .fa {
+    background: #42b3e5;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 30px;
+    margin-top: 35%;
+    padding: 15px;
+}
+.grid-item-layer .fa:hover{
+    border:2px solid #42b3e5;
+    background:transparent;
+    color:#42b3e5;
+}
+@media (max-width: 768px) {
+	.grid-item-layer .fa {margin-top: 40%;} 
+} 
+@media (min-width: 768px) {
+	.grid-item {
+		float: left;
+		width: 24.5%;
+		margin-left: 1.5%;
+		height: 260px;
+	}
+	.grid-item-width2 {
+		width: 48%;
+		margin-left: 0;
+	    height: 520px;
+	}
+	.grid-item-width2 .fa {margin-top: 42%;}
+} 
+/*** End portfolio ***/
+
+
+/*** 8- Start Testimonials ***/
+.testimonial_item { padding: 0 15px; }
+.testimonial_content {
+    background: #e5e5e5;
+    border-radius: 18px;
+    margin: 55px 0 30px;
+    padding: 40px 15px 40px 70px;
+    position:relative;
+    color:#393939;
+}
+
+.testimonial_content::after {
+    background: inherit;
+    bottom: -10px;
+    content: "";
+    height: 20px;
+    left: 47%;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 20px;
+}
+@media (min-width: 500px) and (max-width: 991px) {.testimonial_content::after{left: 49%;}}
+.testimonial_content p { position:relative; }
+.testimonial_content p:first-child::before {
+    color: #989898;
+    content: ",,";
+    font-family: "GillSansMT-UltraBold";
+    font-size: 60px;
+    left: -54px;
+    position: absolute;
+    top: -45px;
+    transform: rotateY(180deg);
+}
+.testimonial_item:hover .testimonial_content {
+    background: #42b3e5;
+    color: #fff;
+}
+.testimonial_item:hover .testimonial_content::after {
+    width: 22px;
+    height: 22px;
+    bottom:-11px;
+}
+.testimonial_item:hover .testimonial_content p:first-child::before {
+    color: inherit;
+}
+.testimonial_item > img {
+    border-radius: 100%;
+    height: 80px;
+    width: 80px;
+}
+.worker_name {
+    font-family: "futura_ltbold",sans-serif;
+    margin: 10px 0 45px;
+    text-transform: uppercase;
+}
+/*** End testimonials ***/
+
+
+/*** 9- Start Contact-us ***/
+.contact-us {
+    background: #62c1ea;
+    padding:27px 0 32px;
+}
+.contact-us h2 {
+    margin: 20px 0 0;
+    color:#73757e;
+}
+.contact-us .second_heading {
+    font-size: 49px;
+    font-family: "futura_ltbook",sans-serif;
+    margin:8px 0;
+}
+.contact-us form.form-inline {
+    padding-right: 27px;
+}
+.contact-us .form-inline .form-control {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-size: 15px;
+    height: 45px;
+    margin: 8px;
+    padding: 10px 20px;
+    width: 245px;
+    box-shadow: none;
+}
+.contact-us .form-inline textarea.form-control {
+    width: 372px;
+    resize:none;
+}
+.contact-us .form-control:focus {
+    border: 2px solid #42b3e5;
+    box-shadow: 0px 0px 5px 1px #42b3e5;
+}
+.contact-us .btn.submit_btn {
+    background-color: #73757e;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform:uppercase;
+    height: 45px;
+    width: 120px;
+    border-radius: 10px;
+    margin: 6px 8px 6px 0;
+    border: 2px solid #73757e;
+}
+.form-control::-moz-placeholder{color:#adadad;}
+.form-control:-ms-input-placeholder{color:#adadad;}
+.form-control::-webkit-input-placeholder{color:#adadad;}
+.contact-us .btn.submit_btn:hover {
+    background-color: #555;
+    outline: none;
+}
+@media (max-width: 992px) {
+	.contact-us h2 {margin-left: 6px}
+	.contact-us .second_heading {font-size: 33px; margin-left: 6px;}
+	.contact-us .form-inline {display: block;} 
+	.contact-us .form-inline .form-control {width: 100%;}
+	.contact-us .form-inline textarea.form-control { width: 100%;}
+	.contact-us .btn.submit_btn {float: left; margin-left: 10px;}
+} 
+/*** End Contact-us ***/
+
+
+/*** 10- Start Footer ***/
+footer {
+    background: url(../imgs/footer_bg.jpg) no-repeat;
+    background-size:cover;
+    position:relative;
+    padding-top:45px;
+}
+footer::before {
+    background: rgba(255, 255, 255, 0.33) none repeat scroll 0 0;
+    content: "";
+    height: 45px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+footer::after {
+    background: rgba(34, 37, 51, 0.9) none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.footer_top,.footer_bottom{ position:relative; z-index:1; color:#fff;}
+.footer_item { margin-top: 75px; }
+.footer_item > h4 {
+    color: #fff;
+    font-family: "futura_ltbook",sans-serif;
+    font-size: 25px;
+    margin-bottom: 34px;
+    text-transform: inherit;
+}
+.footer_item .list-unstyled > li a{ color: #fff; }
+/* Footer About */
+.footer_item .logo {
+    margin-bottom: 15px;
+    width: 200px;
+}
+.list-inline.footer_social_icon { margin: 32px 0 0; }
+.footer_social_icon .fa {
+    background: #42b3e5 none repeat scroll 0 0;
+    border-radius: 100%;
+    color: #222;
+    font-size: 20px;
+    height: 45px;
+    padding: 12px;
+    text-align: center;
+    width: 45px;
+}
+.footer_item .footer_social_icon .fa:hover,.footer_item .footer_social_icon .fa:focus {
+    background: #78caed none repeat scroll 0 0;
+}
+/* Footer Explore */
+.footer_menu .fa {
+    font-size: 10px;
+    margin-right: 18px;
+}
+.list-unstyled.footer_menu > li { padding: 4px 0; }
+/* Footer Post */
+.list-unstyled.post,.list-unstyled.footer_contact {
+    margin-top: -14px;
+}
+.post .date {
+    border: 2px solid #fff;
+    border-radius: 100%;
+    display: block;
+    float: left;
+    font-size: 20px;
+    height: 50px;
+    line-height: 12px;
+    margin-right: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 50px;
+}
+.footer_item li a:hover .date,.footer_item li a:focus .date{ border:2px solid #aaa; }
+.footer_item li a:hover,.footer_item li a:focus{ color: #aaa; }
+.post .date small { font-size: 12px; }
+.list-unstyled.post > li,.list-unstyled.footer_contact > li {
+    padding: 14px 0;
+    overflow:hidden;
+}
+/* Footer Contact */
+.footer_contact .fa {
+    margin-right: 25px;
+    text-align: center;
+    width: 15px;
+    float: left;
+    font-size:18px;
+}
+.list-unstyled.footer_contact p { overflow: hidden; }
+.footer_bottom {
+    background: #1a1c27 none repeat scroll 0 0;
+    padding: 28px 0 18px;
+    margin-top:55px;
+}
+.footer_bottom a:hover,.footer_bottom a:focus { color: #d7a300; }
+@media (min-width: 992px) and (max-width: 1200px) {footer a {font-size: 14px !important}}
+@media (min-width: 576px) and (max-width: 768px) {footer a {font-size: 13px !important}}
+/* scroll up */
+.scrollUp .fa {
+    position: absolute;
+    bottom: 0px;
+    right: 15px;
+    color: #000;
+    height: 50px;
+    width: 70px;
+    line-height: 50px;
+    font-size: 50px;
+    z-index: 10000;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 15px 15px 0 0;
+    background-color: #42b3e5;
+    cursor: pointer;
+}
+.scrollUp .fa:hover { background-color: #78caed;}
+@media (max-width: 576px) {
+    .scrollUp .fa {
+	    height: 30px;
+	    line-height: 30px;
+	    font-size: 30px;
+    }
+} 
+/*** End Footer ***/
+
+
+/*** 11- Start shared styles ***/
+header .top-nav a, .navbar-nav .active .nav-link, .navbar-nav .nav-link, .btn-know, .filters > button, .grid-item img, .grid-item-layer, .grid-item-layer .fa, .testimonial_content, .footer_social_icon .fa, .scrollUp .fa {
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.about-first, .about-second, .services, .portfolio, .testimonials {
+	 padding-top: 70px;
+	 padding-bottom: 90px;
+} 
+/*** End shared styles ***/
